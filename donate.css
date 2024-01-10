@@ -1,0 +1,91 @@
+/* donate page styling */
+body {
+  background: linear-gradient(-45deg, #1abc9c, #1abc9c, #1abc9c);
+  /* position: relative; */
+  animation: change 10s ease-in-out infinite;
+
+}
+
+.main {
+  display: flex;
+  position: relative;
+  top: 150px;
+  left: 100px;
+  color: rgb(255, 255, 255);
+}
+
+.main .bgimg {
+  margin: 5px 20px;
+  /* background-color: yellow; */
+
+}
+
+.main .quotes {
+  /* padding:20px 5px; */
+  /* background-color: rgb(56, 188, 211); */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.main .quotes .discription {
+  margin: 5px;
+  letter-spacing: 0.7px;
+  font-family: sans-serif;
+  padding-top: 15px;
+  color: white;
+
+}
+
+.main form {
+  text-align: center;
+  justify-content: space-around;
+  margin: 30px;
+
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    top: 0px;
+    left: 0px;
+    /*     z-index:-999; */
+  }
+
+  body {
+    overflow: none;
+  }
+
+  .main .quotes {
+    padding: 30px 20px;
+    margin: 0;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  .main .bgimg {
+    padding: 20px;
+  }
+}

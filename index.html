@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .quote {
+      font-size: 2rem;
+      color: white;
+      position: relative;
+    }
+
+    main {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image/background pic.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      /* z-index: -999; */
+    }
+
+    section {
+      position: relative;
+      background-color: rgb(33 31 31 / 56%);
+      padding: 50px;
+      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+      border-radius: 10px;
+
+    }
+
+    #donate {
+      font-size: 16px;
+      padding: 8px;
+      margin: 10px;
+      margin-top: 20px;
+      background-color: #1abc9c;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      transition: 300ms linear;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #donate:hover {
+      transform: translate(0, -5px, 0);
+      background-color: #1abc9c;
+      transition: 300ms ease-out;
+    }
+
+    @media screen and(max-width:768px) {
+      main {
+        z-index: -999;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <h4>SafeKids</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <!----- <li><a href="about.html">About</a></li>--->
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <main>
+    <section>
+      <div class="quote" data-aos="fade-right">BE THE CHANGE</div>
+      <div class="quote" data-aos="fade-left">YOU WANT TO SEE IN THE WORLD</div>
+
+      <a id="donate" href="donate.html">
+        DONATE
+      </a>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function myFunction() {
+      document.addEventListener('onclick', function () {
+        location.href = "donate.html";
+      })
+    }
+    AOS.init({
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      easing: 'ease',
+    });
+
+  </script>
+</body>
+
+</html>
